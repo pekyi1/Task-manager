@@ -4,7 +4,7 @@
 
 ## What Went Well?
 -   Building on the existing structure was straightforward.
--   SLF4J integration was simple (using `slf4j-simple` for now).
+-   **Adaptability:** Switched from SLF4J to `java.util.logging` to resolve Maven dependency issues in the environment.
 -   Tests were easy to extend for the new features.
 
 ## What Could Be Improved?

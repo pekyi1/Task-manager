@@ -21,10 +21,10 @@
 -   Builds triggered on push to `main`.
 
 ## Demo Screenshots
-*(Placeholders - User to add actual screenshots)*
--   [ ] Screenshot of "Add Task"
--   [ ] Screenshot of "View Tasks"
--   [ ] Screenshot of GitHub Actions Success
+Please place your screenshots in the `screenshots/` folder and name them as follows:
+-   `sprint1_add_task.png` -> ![Add Task](screenshots/sprint1_add_task.png)
+-   `sprint1_view_tasks.png` -> ![View Tasks](screenshots/sprint1_view_tasks.png)
+-   `sprint1_ci_success.png` -> ![GitHub Actions Success](screenshots/sprint1_ci_success.png)
 
 ## Status of User Stories
 | ID | Story | Status | Points |

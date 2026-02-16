@@ -25,5 +25,8 @@
 | Feat | Logging | **Done** | - |
 
 ## Evidence
--   [ ] GitHub Actions passing.
--   [ ] Logs showing "Task added", "Task deleted" etc.
+Please place your screenshots in the `screenshots/` folder and name them as follows:
+-   `sprint2_delete_task.png` -> ![Delete Task](screenshots/sprint2_delete_task.png)
+-   `sprint2_update_task.png` -> ![Update Task](screenshots/sprint2_update_task.png)
+-   `sprint2_logs.png` -> ![Logs](screenshots/sprint2_logs.png)
+-   `sprint2_ci_success.png` -> ![GitHub Actions Success](screenshots/sprint2_ci_success.png)

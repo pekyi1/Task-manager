@@ -12,9 +12,14 @@ import java.util.logging.Logger;
 public class TaskManager {
     private static final Logger logger = Logger.getLogger(TaskManager.class.getName());
     private List<Task> tasks;
-    private static final String FILE_PATH = "tasks.csv"; // Changed to CSV for simple parsing
+    private final String filePath;
 
     public TaskManager() {
+        this("tasks.csv");
+    }
+
+    public TaskManager(String filePath) {
+        this.filePath = filePath;
         this.tasks = new ArrayList<>();
         loadTasks();
     }
@@ -86,7 +91,7 @@ public class TaskManager {
     }
 
     private void saveTasks() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (Task task : tasks) {
                 // simple pipe-delimited persistence: id|title|desc|priority|status
                 String line = String.format("%s|%s|%s|%s|%s",
@@ -104,11 +109,11 @@ public class TaskManager {
     }
 
     private void loadTasks() {
-        if (!Files.exists(Paths.get(FILE_PATH))) {
+        if (!Files.exists(Paths.get(filePath))) {
             return;
         }
         tasks.clear();
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split("\\|");

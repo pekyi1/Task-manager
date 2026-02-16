@@ -10,14 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TaskManagerTest {
     private TaskManager taskManager;
 
+    private static final String TEST_FILE = "test_tasks.csv";
+
     @BeforeEach
     public void setUp() {
-        // Clear existing tasks.json for clean test
-        File file = new File("tasks.json");
+        // Clear existing test file for clean test
+        File file = new File(TEST_FILE);
         if (file.exists()) {
             file.delete();
         }
-        taskManager = new TaskManager();
+        taskManager = new TaskManager(TEST_FILE);
     }
 
     @Test
@@ -74,5 +76,28 @@ public class TaskManagerTest {
         assertEquals("Updated Title", updatedTask.getTitle());
         assertEquals("Updated Desc", updatedTask.getDescription());
         assertEquals("High", updatedTask.getPriority());
+    }
+
+    @Test
+    public void testGetAllTasks() {
+        taskManager.addTask("T1", "D1", "High");
+        taskManager.addTask("T2", "D2", "Low");
+
+        List<Task> tasks = taskManager.getAllTasks();
+        assertEquals(2, tasks.size());
+        assertEquals("T1", tasks.get(0).getTitle());
+        assertEquals("T2", tasks.get(1).getTitle());
+    }
+
+    @Test
+    public void testDeleteNonExistentTask() {
+        boolean result = taskManager.deleteTask("non-existent-id");
+        assertFalse(result);
+    }
+
+    @Test
+    public void testUpdateNonExistentTask() {
+        boolean result = taskManager.updateTask("non-existent-id", "Title", "Desc", "High");
+        assertFalse(result);
     }
 }
