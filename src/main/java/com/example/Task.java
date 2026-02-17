@@ -2,6 +2,10 @@ package com.example;
 
 import java.util.UUID;
 
+/**
+ * Represents a task in the task management system.
+ * Each task has a unique ID, title, description, priority, and status.
+ */
 public class Task {
     private String id;
     private String title;
@@ -68,7 +72,8 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("[%s] %s (Priority: %s, Status: %s) - %s",
+        // Updated format for better log readability in Sprint 2
+        return String.format("Task [ID=%s] %s | Priority: %s | Status: %s | %s",
                 id.substring(0, 8), title, priority, status, description);
     }
 }
