@@ -14,6 +14,9 @@ public class TaskManager {
     private List<Task> tasks;
     private final String filePath;
 
+    /**
+     * Default constructor uses the default storage file.
+     */
     public TaskManager() {
         this("tasks.csv");
     }
@@ -104,7 +107,7 @@ public class TaskManager {
                 writer.newLine();
             }
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Error saving tasks", e);
+            logger.log(Level.SEVERE, "Error saving tasks to file " + filePath, e);
         }
     }
 
