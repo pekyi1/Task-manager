@@ -2,6 +2,7 @@
 
 **Project:** Task Manager
 **Sprint:** 0 (Planning)
+**Status:** Completed
 
 ## 1. Product Vision
 **Vision Statement:**
