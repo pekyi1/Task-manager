@@ -39,3 +39,6 @@ If you have Maven installed:
 -   [Sprint 1: Retrospective](SPRINT_1_RETROSPECTIVE.md)
 -   [Sprint 2: Review](SPRINT_2_REVIEW.md)
 -   [Sprint 2: Retrospective](SPRINT_2_RETROSPECTIVE.md)
+
+## Author
+This project was implemented by Fred Pekyi as part of the Agile & DevOps module.
