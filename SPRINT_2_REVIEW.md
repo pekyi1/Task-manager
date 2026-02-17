@@ -1,6 +1,6 @@
 # Sprint 2 Review
 
-**Date:** February 16, 2026
+**Date:** February 16, 2026 (Final Review)
 **Sprint Goal:** Implement Delete and Update functionality, and improve code with logging.
 
 ## Deliverables
