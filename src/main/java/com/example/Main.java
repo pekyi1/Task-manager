@@ -46,13 +46,16 @@ public class Main {
     }
 
     private static void printMenu() {
-        System.out.println("\n--- Menu ---");
+        System.out.println("\n========================");
+        System.out.println("      TASK MANAGER      ");
+        System.out.println("========================");
         System.out.println("1. Add Task");
         System.out.println("2. View Tasks");
         System.out.println("3. Mark Task Complete");
         System.out.println("4. Delete Task");
         System.out.println("5. Update Task");
         System.out.println("0. Exit");
+        System.out.println("------------------------");
         System.out.print("Enter choice: ");
     }
 
